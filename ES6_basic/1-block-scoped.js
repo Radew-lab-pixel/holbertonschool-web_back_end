@@ -11,18 +11,16 @@ export default function taskBlock(trueOrFalse) {
   // using NOT gate task2 = NOT trueOrFalse
   // const task2 = trueOrFalse;
   // const task2 = true;
-
-  let task = false;
-  let task2 = true;
+  const task = false;
+  const task2 = true;
 
   if (trueOrFalse) {
-    task = true;
-    task2 = false;
-  }
-  if (trueOrFalse) {
-    task = !trueOrFalse;
-    task2 = trueOrFalse;
+    const task = true;
+    const task2 = false;
+    if (task === true && task2 === false) {
+      return [false, true];
+    }
   }
 
-  return [task, task2];
+  return [task, task2]; // Returns original values: [false, true]
 }
