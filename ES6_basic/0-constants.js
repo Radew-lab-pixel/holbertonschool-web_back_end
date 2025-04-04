@@ -1,7 +1,7 @@
 
 
 export function taskFirst() {
-  // use const if variable is fixed
+  // use const if is fixed
   //
   const taskFirst = "i prefer const when I can"; 
   return taskFirst;
@@ -13,7 +13,7 @@ export function getLast() {
 
   
 export function taskNext() {
-    //  use let if variable required changes
+    //  use let if required changes
     // 
     let combination = 'But sometimes let';
     combination += getLast();
