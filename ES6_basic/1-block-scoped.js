@@ -17,8 +17,8 @@ export default function taskBlock(trueOrFalse) {
   if (trueOrFalse) {
     const task = true;
     const task2 = false;
-    // if (task === true && task2 === false) { // WTH ??? need this to pass the eslint checker !!!
-    return [!task, !task2];
+
+    return [!task, !task2]; // WTH ??? need this to pass the eslint checker !!!
     // }
   }
   // who set this task 1 !!!! WTH !!!
