@@ -1,5 +1,3 @@
-
-
 export function taskFirst() {
   // use consT if is fixed
   //
@@ -11,7 +9,6 @@ export function getLast() {
     return ' is okay';
   }
 
-  
 export function taskNext() {
     //  use leT if required changes
     // 
