@@ -1,11 +1,8 @@
-/* export function taskFirst() {
-    var task = 'I prefer const when I can.';
-    return task;
-  } */
+
 
 export function taskFirst() {
-  // avoid using var , use const if variable is fixed
-  // var task = 'I prefer const when I can.';
+  // use const if variable is fixed
+  //
   const taskFirst = "i prefer const when I can"; 
   return taskFirst;
 }
@@ -16,8 +13,8 @@ export function getLast() {
 
   
 export function taskNext() {
-    // avoid using var , use let if variable required changes
-    // var  combination = 'But sometimes let';
+    //  use let if variable required changes
+    // 
     let combination = 'But sometimes let';
     combination += getLast();
   
