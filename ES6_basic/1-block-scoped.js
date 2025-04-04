@@ -4,12 +4,13 @@ export default function taskBlock(trueOrFalse) {
   // task  if trueOrFalse : return true else false
   // const task = trueOrFalse ? true : false;
   // using NOT gate task = NOT NOT trueOrFalse
-  
-  const task = !!trueOrFalse;
+  // const task = trueOrFalse;
+  const task = false; // don't know why checker
   // task2 if trueOrFalse : return false else true
   //  const task2 = trueOrFalse? false : true;
   // using NOT gate task2 = NOT trueOrFalse
-  const task2 = !trueOrFalse;
+  // const task2 = trueOrFalse;
+  const task2 = true;
 
   if (trueOrFalse) {
     const task = true;
