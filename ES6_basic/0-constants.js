@@ -1,7 +1,7 @@
 export function taskFirst() {
   // use consT if is fixed
   //
-  const taskFirst = "i prefer const when I can"; 
+  const taskFirst = "I prefer const when I can"; 
   return taskFirst;
 }
 
