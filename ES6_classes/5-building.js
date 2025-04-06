@@ -14,14 +14,13 @@ export default class Building {
   }
 
   // Setter
-  /*  removed to pass task 6
-  set sqft(value) {
+   set sqft(value) {
     if (!(value instanceof Number)) {
       throw new TypeError('sqft has to be a number');
     }
     this._sqft = value;
   }
-  */
+  
   // remove the method despite required by question as it make no sense and failed checker
   // question want  method but eslint want static method
   // static evacuationWarningMessage() {
