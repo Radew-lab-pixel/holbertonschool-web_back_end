@@ -16,8 +16,9 @@ export default class SkyHighBuilding extends Building {
     return this._floors;
   }
 
-  // question wants method , eslint want static method
-  static evacuationWarningMessage() {
-    return 'Evacuate slowly the NUMBER_OF_FLOORS floors.';
+  // method
+  evacuationWarningMessage() {
+    // return 'Evacuate slowly the NUMBER_OF_FLOORS floors.';
+    return `Evacuate slowly the ${this._floors} floors.`;
   }
 }

@@ -28,8 +28,5 @@ export default class Building {
   // ??? i don't understand the question but just create another method
   //  throw new Error('Class extending Building must override evacuationWarningMessage');
   // }
-  evacuationWarningMessage() {
-    throw new Error('Class extending Building must override evacuationWarningMessage');
-  }
-
+  
 }
