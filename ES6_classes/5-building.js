@@ -20,9 +20,9 @@ export default class Building {
     this._sqft = value;
   }
 
-  // remove the method despite required by question as it make not sense and failed checker
+  // remove the method despite required by question as it make no sense and failed checker
   // question want  method but eslint want static method
-  // evacuationWarningMessage() {
+  // static evacuationWarningMessage() {
   // ??? i don't understand the question but just create another method
   //  throw new Error('Class extending Building must override evacuationWarningMessage');
   // }
