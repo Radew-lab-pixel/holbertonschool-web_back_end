@@ -24,7 +24,7 @@ export default class Airport {
 
   // method
   toString() {
-    return `[object] ${this._code}`;
+    return `[object ${this._code}]`;
   }
 
   // Custom string representation for console.log
