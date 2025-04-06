@@ -21,4 +21,9 @@ export default class Airport {
   set code(value) {
     this._code = value;
   }
+
+  //method
+  toString(){
+    return `[object] ${this._code}`;
+  }
 }
