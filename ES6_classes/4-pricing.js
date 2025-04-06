@@ -34,7 +34,7 @@ export default class Pricing {
 
   // method
   displayFullPrice() {
-    return `${this._amount} ${this._currency.name} ${this._currency.code}`;
+    return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
   // static method
