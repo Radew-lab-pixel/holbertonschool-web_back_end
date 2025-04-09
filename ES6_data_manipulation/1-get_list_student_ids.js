@@ -3,7 +3,7 @@ export default function getListStudentIds(values) {
     // const list_value = [];
     return [];
   }
-  const listValue = values.map((value) => `${value.id}`);
-
+  // const listValue = values.map((value) => `${value.id}`);
+  const listValue = values.map((value) => value.id);
   return listValue;
 }
