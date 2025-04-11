@@ -7,6 +7,9 @@ export default function updateUniqueItems(map) {
       maps.set(key, 100);
     }
   } */
+  if (!(map instanceof Map)) {
+    throw new TypeError('Cannot process');
+  }
 
   for (const [key, value] of map) {
     if (value === 1) {
