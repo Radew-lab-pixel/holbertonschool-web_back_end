@@ -1,10 +1,12 @@
 export default function cleanSet(set, startString) {
   const filteredValues = [];
   // if (!(startString instanceof String))
+  /**
   if (typeof startString !== 'string') {
     return filteredValues;
     // return '';
   }
+* */
 
   // Iterate through each value in the set
   for (const value of set) {
