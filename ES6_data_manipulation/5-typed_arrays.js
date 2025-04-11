@@ -1,4 +1,7 @@
 export default function createInt8TypedArray(length, position, value) {
+  if ((position > length) || (position < 0)) {
+    throw new Error('Position outside range');
+  }
   // create raw binary storage
   const buffer = new ArrayBuffer(length);
 
