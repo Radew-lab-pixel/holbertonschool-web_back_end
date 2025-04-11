@@ -8,6 +8,8 @@ export default function createInt8TypedArray(length, position, value) {
   // set Int8 value
   dataview.setInt8(position, value);
 
-  // return dataview;
-  return buffer;
+  // bytelength = dataview.byteLength;
+  // byteoffset = dataview.byteOffset;
+  return dataview;
+  // return (`DataView {buffer: ${buffer} }`);
 }
