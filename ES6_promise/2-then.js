@@ -20,7 +20,7 @@ export default function handleResponseFromAPI(promise) {
     }))
     .catch((error) => {
       console.error(error);
-      // return (error);
+      return new Error();
     })
     .finally(() => { // alway execute regardless
       console.log('Got a response from the API');
