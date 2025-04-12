@@ -23,6 +23,6 @@ export default function handleResponseFromAPI(promise) {
       // return (error);
     })
     .finally(() => { // alway execute regardless
-      console.log('Got a response from the AP');
+      console.log('Got a response from the API');
     });
 }
