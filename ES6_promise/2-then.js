@@ -11,11 +11,12 @@ export default function handleResponseFromAPI(promise) {
     // return response;
     .then(() => {
       const response = { status: 200, body: 'success' };
-      console.log(`status: ${response.status}, body: ${response.body}`);
+      // console.log(`status: ${response.status}, body: ${response.body}`);
+      return (`status: ${response.status}, body: ${response.body}`);
     })
     .catch((error) => {
       console.error(error);
-      // return error;
+      return (error);
     })
     .finally(() => { // alway execute regardless
       console.log('Got a response from the AP');
