@@ -69,11 +69,19 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   // Create both promises
   const userPromise = signUpUser(firstName, lastName)
     .then((value) => ({ status: 'fulfilled', value }))
-    .catch((error) => ({ status: 'rejected', value: error }));
+    // .catch((error) => ({ status: 'rejected', value: error }));
+    .catch((error) => ({
+      status: 'rejected',
+      value: error instanceof Error ? error.toString() : String(error),
+    }));
 
   const photoPromise = uploadPhoto(fileName)
     .then((value) => ({ status: 'fulfilled', value }))
-    .catch((error) => ({ status: 'rejected', value: error }));
+    // .catch((error) => ({ status: 'rejected', value: error }));
+    .catch((error) => ({
+      status: 'rejected',
+      value: String(error),
+    }));
 
   // Use Promise.all to wait for both wrapped promises
   return Promise.all([userPromise, photoPromise]);
