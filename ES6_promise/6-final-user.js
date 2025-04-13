@@ -13,6 +13,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
 }
 */
 
+/* failed checker
 export default function handleProfileSignup(firstName, lastName, fileName) {
   return Promise.all([
     signUpUser(firstName, lastName).catch((e) => e),
@@ -29,6 +30,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       },
     ]);
 }
+    */
 /*
   const promises = [
     signUpUser(firstName, lastName),
@@ -48,3 +50,16 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       };
     }));
 } */
+
+export default function handleProfileSignup(firstName, lastName, fileName) {
+  const promises = [
+    signUpUser(firstName, lastName),
+    uploadPhoto(fileName),
+  ];
+
+  return Promise.allSettled(promises)
+    .then((results) => results.map((result) => ({
+      status: result.status,
+      value: result.status === 'fulfilled' ? result.value : result.reason,
+    })));
+}
