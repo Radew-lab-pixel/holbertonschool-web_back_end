@@ -50,7 +50,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       };
     }));
 } */
-
+/* failed checker
 export default function handleProfileSignup(firstName, lastName, fileName) {
   const promises = [
     signUpUser(firstName, lastName),
@@ -62,4 +62,19 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       status: result.status,
       value: result.status === 'fulfilled' ? result.value : result.reason,
     })));
+}
+*/
+
+export default function handleProfileSignup(firstName, lastName, fileName) {
+  // Create both promises
+  const userPromise = signUpUser(firstName, lastName)
+    .then((value) => ({ status: 'fulfilled', value }))
+    .catch((error) => ({ status: 'rejected', value: error }));
+
+  const photoPromise = uploadPhoto(fileName)
+    .then((value) => ({ status: 'fulfilled', value }))
+    .catch((error) => ({ status: 'rejected', value: error }));
+
+  // Use Promise.all to wait for both wrapped promises
+  return Promise.all([userPromise, photoPromise]);
 }
