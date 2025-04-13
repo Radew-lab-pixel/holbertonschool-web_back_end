@@ -2,13 +2,26 @@ import signUpUser from './4-user-promise';
 import uploadPhoto from './5-photo-reject';
 
 export default function handleProfileSignup(firstName, lastName, fileName) {
-  /*
-    Promise.all([signUpUser(firstName,lastName),uploadPhoto(fileName)])
-    .then(([userResponse, photoResponse]) => {
-        const response = `${UserRespomse.firstName} `
-    });
-} */
+  return Promise.all([signUpUser(firstName, lastName), uploadPhoto(fileName)])
+    .then(([UserResponse, PhotoResponse]) => {
+      const response = `${UserResponse.firstName} ${UserResponse.lastName} ${PhotoResponse.fileName}`;
+      console.log(response);
+    })
+    .catch((error) => console.error(error));
+}
+/*
+ return Promise.all([uploadPhoto(), createUser()])
+    .then(([PhotoResponse, UserResponse]) => {
+      const response = `${PhotoResponse.body} ${UserResponse.firstName} ${UserResponse.lastName}`;
+      console.log(response);
+    })
 
+    .catch(() => console.log('Signup system offline'));
+
+  // .finally (()=> {
+}
+*/
+/*
   const promises = [
     signUpUser(firstName, lastName),
     uploadPhoto(fileName),
@@ -27,4 +40,4 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
         value: result.reason,
       };
     }));
-}
+} */
