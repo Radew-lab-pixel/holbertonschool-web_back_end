@@ -1,32 +1,39 @@
 import signUpUser from './4-user-promise';
 import uploadPhoto from './5-photo-reject';
 
+/* failed checker
 export default function handleProfileSignup(firstName, lastName, fileName) {
   return Promise.all([signUpUser(firstName, lastName), uploadPhoto(fileName)])
     .then(([UserResponse, PhotoResponse]) => {
-      const response = `${UserResponse.firstName} ${UserResponse.lastName} ${PhotoResponse.fileName}`;
+      const response = `${UserResponse.firstName} ${UserResponse.lastName}
+      ${PhotoResponse.fileName}`;
       console.log(response);
     })
     .catch((error) => console.error(error));
 }
-/*
- return Promise.all([uploadPhoto(), createUser()])
-    .then(([PhotoResponse, UserResponse]) => {
-      const response = `${PhotoResponse.body} ${UserResponse.firstName} ${UserResponse.lastName}`;
-      console.log(response);
-    })
-
-    .catch(() => console.log('Signup system offline'));
-
-  // .finally (()=> {
-}
 */
+
+export default function handleProfileSignup(firstName, lastName, fileName) {
+  return Promise.all([
+    signUpUser(firstName, lastName).catch((e) => e),
+    uploadPhoto(fileName).catch((e) => e),
+  ])
+    .then(([userResult, photoResult]) => [
+      {
+        status: userResult instanceof Error ? 'rejected' : 'fulfilled',
+        value: userResult instanceof Error ? userResult.message : userResult,
+      },
+      {
+        status: photoResult instanceof Error ? 'rejected' : 'fulfilled',
+        value: photoResult instanceof Error ? photoResult.message : photoResult,
+      },
+    ]);
+}
 /*
   const promises = [
     signUpUser(firstName, lastName),
     uploadPhoto(fileName),
   ];
-
   return Promise.allSettled(promises)
     .then((results) => results.map((result) => {
       if (result.status === 'fulfilled') {
