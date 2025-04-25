@@ -3,8 +3,8 @@
 
 def floor(n: float) -> int:
 
-    """ 
-    This module contains a function to floor a float number to its integer value.
+    """
+    This module contains a function to floor a float number.
 
     Keyword arguments:
     args : n (float)
