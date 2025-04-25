@@ -11,6 +11,3 @@ def element_length(lst: List[str]) -> List[Tuple[str, int]]:
 
 
     return [(i, len(i)) for i in lst]
-
-# def element_length(lst):
-#     return [(i, len(i)) for i in lst]
