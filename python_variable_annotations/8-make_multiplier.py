@@ -9,9 +9,8 @@ def make_multiplier(multipler: float) -> Callable[[float], float]:
     multipler -- float
     Return : multipler * value
     """
-    
 
-    def multiple_func(value: float) -> float:
+    def multipler_func(value: float) -> float:
         return value * multipler
 
-    return multiple_func
+    return multipler_func
