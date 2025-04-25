@@ -2,6 +2,7 @@
 from typing import List, Union
 
 
+"""sun_mixed_list"""
 def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """
     Calculate the sum of a list containing integers and floats.

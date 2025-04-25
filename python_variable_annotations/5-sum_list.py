@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 from typing import List
 
-"""
-Module demonstrating  list """
+
+""" Module demonstrating  list """
 
 def sum_list(input_list: List[float]) -> float:
     """
