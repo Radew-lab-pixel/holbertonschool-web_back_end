@@ -2,15 +2,11 @@
 
 
 def to_str(n: float) -> str:
+    """to_str function
 
-    """
-    to_str - Convert a float to its string representation.
-
-    Args:
-        n: The float number to convert to string.
-
-    Returns:
-        The string representation of the float.
+    Keyword arguments:
+    argument -- n (float)
+    Return: n (str)
     """
 
     return str(n)
