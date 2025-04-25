@@ -2,15 +2,15 @@
 from typing import Callable
 
 
-def make_multiplier(multipler: float) -> Callable[[float], float]:
+def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """ function make_multipler
-    
+
     arguments:
     multipler -- float
     Return : multipler * value
     """
 
-    def multipler_func(value: float) -> float:
-        return value * multipler
+    def multiplier_func(value: float) -> float:
+        return value * multiplier
 
-    return multipler_func
+    return multiplier_func
