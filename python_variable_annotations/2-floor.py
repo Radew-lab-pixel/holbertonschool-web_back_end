@@ -8,7 +8,7 @@ def floor(n: float) -> int:
 
     Keyword arguments:
     args : n (float)
-    Return: n (integer)
+    Return: integer
     """
 
     return int(n)
