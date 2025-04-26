@@ -23,4 +23,4 @@ async def wait_n(n: int, max_delay: int) -> list:
         delay_list.append(timing)
     # needed else RuntimeWarning: coroutine 'wait_random' was never awaited
     delays = await asyncio.gather(*delay_list)
-    return delays
+    return sorted(delays)
