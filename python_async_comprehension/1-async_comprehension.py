@@ -11,10 +11,10 @@ async def async_comprehension() -> List[float]:
     # return [num async for num]
     numbers = []
     # count = 0
-    async for num in async_generator():
-        random_float = random.random()
-        numbers.append(random_float)
-        # count += 1
-        # if count >= 10:
-        #    break
-    return numbers
+    # async for num in async_generator():
+    #     random_float = random.random()
+    #     numbers.append(random_float)
+    # return numbers
+
+    # return [random_float async for num in async_comprehension()>random_float = random.random()]
+    return [random.random() async for _ in async_generator()]
