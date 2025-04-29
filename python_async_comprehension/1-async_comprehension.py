@@ -26,5 +26,6 @@ async def async_comprehension() -> List[float]:
     #     numbers.append(random_float)
     # return numbers
 
-    # return[random_float async for num in async_comprehension()>random_float=random.random()]
+    # return[random_float async for num in async_comprehension()>
+    # random_float=random.random()]
     return [random.random() async for _ in async_generator()]
