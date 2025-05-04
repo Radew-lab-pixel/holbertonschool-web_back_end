@@ -1,0 +1,12 @@
+// Connect to MongoDB (default: localhost:27017)
+const conn = new Mongo();
+
+// Get the admin database (required for listing all DBs)
+const adminDb = conn.getDB("admin");
+
+// List all databases
+const databases = adminDb.adminCommand({ listDatabases: 1 });
+
+// Print the database names
+print("List of all MongoDB databases:");
+databases.databases.forEach(db => print(`- ${db.name}`));
