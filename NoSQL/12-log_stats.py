@@ -5,7 +5,7 @@ from pymongo import MongoClient
 
 
 client = MongoClient("mongodb://localhost:27017/")
-
+""" return count of methods """
 # db = client["logs"]  # create or use database "logs"
 # collection = db["nginx"]  # create or use collection "nginx"
 
