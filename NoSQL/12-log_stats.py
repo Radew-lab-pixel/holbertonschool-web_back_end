@@ -27,7 +27,9 @@ def task_12():
     print(f"\tmethod PATCH: {n_Patch}")
     n_Delete = collection.count_documents({"method": "DELETE"})
     print(f"\tmethod DELETE: {n_Delete}")
-    n_status = collection.count_documents({"path": "/status"})
+    # n_status = collection.count_documents({"path": "/status"})
+    n_status = collection.count_documents({"method": "GET",
+                                          "path": "/status"})
     print(f"{n_status} status check")
 
 
