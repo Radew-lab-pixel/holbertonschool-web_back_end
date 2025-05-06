@@ -17,4 +17,7 @@ def update_topics(mongo_collection, name, topics):
                                             {"$set": {"topics": topics}})
     # new_update = mongo_collection.update_many({"name": name},
     #                                           {"$set": {"topics": topics}})
-    print("OK")  # needed by checker
+    # print("OK")  # needed by checker
+    # print (new_update)
+    # print (new_update.modified_count)
+    return new_update.modified_count
