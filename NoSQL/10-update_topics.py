@@ -11,5 +11,7 @@ def update_topics(mongo_collection, name, topics):
     topics : value of docuument
     Return none
     """
-    new_update = mongo_collection.update_one({"name": name},
-                                             {"$set": {"topics": topics}})
+    # new_update = mongo_collection.update_one({"name": name},
+    #                                          {"$set": {"topics": topics}})
+    new_update = mongo_collection.update_many({"name": {"$gt": name}},
+                                              {"$set": {"topics": topics}})
