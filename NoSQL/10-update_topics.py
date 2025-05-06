@@ -21,3 +21,4 @@ def update_topics(mongo_collection, name, topics):
     # print (new_update)
     # print (new_update.modified_count)
     # return new_update.modified_count
+    return new_update
